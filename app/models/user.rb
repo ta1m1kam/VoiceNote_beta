@@ -3,4 +3,7 @@ class User < ApplicationRecord
   validates :email, {presence: true}
   has_secure_password
   validates :password, {presence: true, length: {minimum: 6}}
+
+  include Gravtastic
+  gravtastic
 end
