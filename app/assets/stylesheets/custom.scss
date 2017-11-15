@@ -249,6 +249,45 @@ span.picture {
     width: 100px;
     height: 20px;
   }
+
+  #note_content{
+    height: 100px;
+  }
+}
+
+#voice-content{
+  counter-reset:list;
+  list-style-type:none;
+  font: 14px/1.6 'arial narrow', sans-serif;
+  padding:0;
+  li{
+    position:relative;
+    margin: 7px 0 7px 0px;
+    padding-left:40px;
+    font-weight: bold;
+    font-size:16px;
+    line-height: 30px;
+    border: 2px solid #756C67;
+    color: #756C67;
+  }
+  li:before{
+    counter-increment: list;
+    content: counter(list);
+    position: absolute;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    line-height:30px;
+    background: #756C67;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 // テスト用 scss
 // img{
