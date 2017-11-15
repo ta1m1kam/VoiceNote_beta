@@ -11,6 +11,10 @@ module SessionsHelper
     cookies.parmanent[:remember_token] = user.remember_token ##20年で切れるCookiesの設定
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
   # 現在ログイン中のユーザーを返す (いる場合)
   def current_user
     if (user_id = session[:user_id])
