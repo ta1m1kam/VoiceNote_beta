@@ -1,24 +1,15 @@
-# README
+# VoiceNote
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+While in class or meeting, you note down things that your attention then. But that make you can't be bothered and that make you get distrated.
+I suggest "VoiceNote" ! This app help you take note with stress free. You only need to push key once!!
 
-Things you may want to cover:
+## View
+comming soon
 
-* Ruby version
+## Usage
+comming soon
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Version
+- ruby 2.3.3
+- ruby on rails 5.0.3
