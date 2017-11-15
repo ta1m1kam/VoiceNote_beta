@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :notes, dependent: :destroy  #dependent ユーザーが削除されると紐づいたnoteも削除
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name, {presence: true, length: {maximum: 50}}
