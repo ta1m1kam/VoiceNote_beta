@@ -246,8 +246,10 @@ span.picture {
 
 .field{
   #status{
-    width: 100px;
-    height: 20px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    width: 100%;
   }
 
   #note_content{
