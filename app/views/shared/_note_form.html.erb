@@ -8,6 +8,7 @@
         recognition.continuous = true;
         recognition.onsoundstart = function() {
             document.getElementById('status').innerHTML = "認識中";
+            // vr_function();
         };
         recognition.onnomatch = function() {
             document.getElementById('status').innerHTML = "もう一度試してください";
@@ -32,6 +33,7 @@
                     var list = $("#voice-content li").text();
                     console.log(list);
                     document.getElementById('note_content').innerHTML = list;
+                    flag_speech = 0;
                     vr_function();
                 }
                 else
