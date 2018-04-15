@@ -3,7 +3,6 @@
 
 
 /* mixins, variables, etc. */
-
 $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
@@ -25,8 +24,19 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  font-family:  "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif;
+
+  .container{
+    padding-top: 60px;
+  }
+
+  header{
+    .container{
+      padding-top: 0px;
+    }
+  }
 }
+
 
 section {
   overflow: auto;
@@ -63,12 +73,13 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #eee;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  font-weight: normal;
 }
 
 /* header */
@@ -257,41 +268,23 @@ span.picture {
   }
 }
 
-#voice-content{
-  counter-reset:list;
-  list-style-type:none;
-  font: 14px/1.6 'arial narrow', sans-serif;
-  padding:0;
-  li{
-    position:relative;
-    margin: 7px 0 7px 0px;
-    padding-left:40px;
-    font-weight: bold;
-    font-size:16px;
-    line-height: 30px;
-    border: 2px solid #756C67;
-    color: #756C67;
-  }
-  li:before{
-    counter-increment: list;
-    content: counter(list);
-    position: absolute;
-    left: 0px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
+
+
+//ボタン用
+.btn-primary{
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #555;
+  &:hover {
+    background-color: #555;
+    border-color: #555;
     color: #fff;
-    line-height:30px;
-    background: #756C67;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  }
+
+  &:active {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
   }
 }
-// テスト用 scss
-// img{
-//   display: none;
-// }
+

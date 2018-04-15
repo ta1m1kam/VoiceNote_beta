@@ -1,7 +1,23 @@
 <%= form_for(@note) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
+    <label id="drop_zone">
+      ファイルをドロップしてください
+      <%= f.file_field :image %>
+    </label>
+    <div id="preview"></div>
     <%= f.text_area :content, placeholder:"Content new note..." %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
+
+<script>
+  $('#note_image').change(function() {
+      var fr = new FileReader();
+      fr.onload = function() {
+          var img = $('<img>').attr('src', fr.result);
+          $('#preview').append(img);
+      };
+      fr.readAsDataURL(this.files[0]);
+  });
+</script>

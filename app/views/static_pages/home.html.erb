@@ -1,36 +1,39 @@
 <% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render "shared/user_info" %>
-      </section>
-      <section class="note_form">
-        <%= render "shared/note_form" %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <ul id="voice-content">
-      <!-- ここにDOM操作でSpeechRecognitionの値が書かれる -->
-      </ul>
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-4">
+        <section class="user_info">
+          <%= render "shared/user_info" %>
+        </section>
+        <section class="note_form">
+          <%= render "shared/note_form" %>
+        </section>
+      </aside>
+      <div class="col-md-8">
+        <ul id="voice-content">
+          <!-- ここにDOM操作でSpeechRecognitionの値が書かれる -->
+        </ul>
+      </div>
+      <%= render "shared/note_post" %>
+
     </div>
-    <%= render "shared/note_post" %>
-
   </div>
-
 <% else %>
 
-  <div class="center jumbotron">
-    <h1>Welcome to the VoiceNote</h1>
+  <div class="home">
+    <div class="container">
+      <div class="center jumbotron">
+        <h1>VoiceNote</h1>
+        <%= image_tag("vn-icon.png", width: "200") %>
+        <p>
+          授業や会議などでメモを録ることがありますが、メモを録る作業は話者が伝えたい情報の伝達を阻害してしまします。
+          しかし、このVoiceNoteは話者の話に集中して聴きながら自動でノートを録ってくれる <br>
+          アプリケーションです。
+        </p>
 
-    <h2>
-      This is the home page for the
-      <a href="https://railstutorial.jp/">VoiceNote</a>
-      application.
-    </h2>
-
-    <%= link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary" %>
+        <%= link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary" %>
+      </div>
+    </div>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
 <% end %>

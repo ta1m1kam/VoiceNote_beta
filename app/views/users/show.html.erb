@@ -1,20 +1,22 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <% if @user.notes.any? %>
-      <h3>Notes (<%= @user.notes.count %>)</h3>
-      <ol class="notes">
-        <%= render @notes %>
-      </ol>
-      <%= will_paginate @notes %>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+        </h1>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <% if @user.notes.any? %>
+        <h3>Notes (<%= @user.notes.count %>)</h3>
+        <ol class="notes">
+          <%= render @notes %>
+        </ol>
+        <%= will_paginate @notes %>
+      <% end %>
+    </div>
   </div>
 </div>

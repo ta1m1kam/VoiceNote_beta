@@ -19,3 +19,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+/.idea
+/voiceNote_beta.iml
+

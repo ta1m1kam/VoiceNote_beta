@@ -1,22 +1,25 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
-<!-- ユーザー検索 -->
-<input type="from" id="form" placeholder="ユーザー名を入力してください" style="width: 250px;" />
+<div class="container">
+  <h1>All users</h1>
+  <!-- ユーザー検索 -->
+  <input type="from" id="form" placeholder="ユーザー名を入力してください" style="width: 250px;" />
 
-<ul id="result">
+  <ul id="result">
 
-</ul>
+  </ul>
 
-<%= will_paginate %>
+  <%= will_paginate %>
 
-<ul class="users">
-  <!-- <% @users.each do |user| %>
+  <ul class="users">
+    <!-- <% @users.each do |user| %>
   <li>
     <%= gravatar_for user, size: 50 %>
     <%= link_to user.name, user %>
   </li>
   <% end %> -->
-  <%= render @users %>
-</ul>
+    <%= render @users %>
+  </ul>
 
-<%= will_paginate %>
+  <%= will_paginate %>
+</div>
+
